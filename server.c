@@ -167,7 +167,7 @@ int main(int argc, char **argv)
 
 	if(fork() != 0)
 		return 0; 
-	(void)signal(SIGCLD, SIG_IGN); 
+	(void)signal(SIGCHLD, SIG_IGN); 
 	(void)signal(SIGHUP, SIG_IGN); 
 	for(i=0;i<32;i++)
 		(void)close(i);	
